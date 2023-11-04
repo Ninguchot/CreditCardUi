@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.andersoon_kotlin.creditcardui"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.andersoon_kotlin.creditcardui"
