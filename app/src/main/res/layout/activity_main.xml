@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:text="Payment Details"
         android:textSize="18sp"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="20dp"
         app:layout_constraintTop_toTopOf="@id/creditCardContainer"
