@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                     val cardNumber = s.toString().replace(nonDigits,"")
 
                     if (cardNumber.length <= 16){
-                        current = cardNumber.chunked(4).joinToString("")
+                        current = cardNumber.chunked(4).joinToString(" ")
                         s!!.filters = arrayOfNulls<InputFilter>(0)
                     }
 
