@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.InputFilter
 import android.text.TextWatcher
+import android.util.Log
 import com.andersoon_kotlin.creditcardui.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -40,7 +41,8 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     s!!.replace(0,s.length,current,0,current.length)
-
+                    creditCardNumberIntentExtra = s.toString()
+                    Log.d("creditNumber",creditCardNumberIntentExtra)
                 }
             }
 
@@ -74,6 +76,8 @@ class MainActivity : AppCompatActivity() {
         if (s.length == 4){
             val  monthAndYear = s.substring(0,4).chunked(2).joinToString("/")
             binding.editMonthAndYear.setText(monthAndYear)
+            monthAndYearIntentExtra = monthAndYear
+            Log.d("my",monthAndYearIntentExtra)
         }
     }
 }
