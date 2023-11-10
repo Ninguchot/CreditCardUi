@@ -53,14 +53,38 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-
+                if (s.toString().length == 4){
+                    monthAndYear(s.toString())
+                }
             }
 
         })
 
     }
-
     companion object{
         private val nonDigits =Regex("\\D")
     }
+
+    private fun monthAndYear(s: String){
+        if (s.length == 4){
+            val  monthAndYear = s.substring(0,4).chunked(2).joinToString("/")
+            binding.editMonthAndYear.setText(monthAndYear)
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
